@@ -1,0 +1,14 @@
+.form {
+  padding: 0 10px;
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  height: 450px;
+  position: relative;
+  .NextAndBack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

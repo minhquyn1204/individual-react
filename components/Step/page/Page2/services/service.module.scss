@@ -1,0 +1,35 @@
+.service {
+  position: relative;
+  height: 450px;
+  padding: 0 13.125px;
+  .services {
+    .titleBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title_page {
+        margin: 5px;
+        font-size: 1.5rem;
+      }
+    }
+
+    .serviced {
+      margin: 5px 0;
+      padding: 5px 25px;
+      border: 1px solid #3333;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      h5 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 16px;
+      }
+      ruby-span: 14px;
+    }
+  }
+  .NextAndBack {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

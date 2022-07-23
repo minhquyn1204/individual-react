@@ -1,0 +1,27 @@
+.SelectMap {
+  position: relative;
+  padding: 0 10px;
+  height: 100%;
+  .selected {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3333;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
+    h5 {
+      margin: 0;
+    }
+  }
+  .selected.active {
+    background-color: rgb(255, 92, 67);
+    span {
+      color: #fff;
+    }
+  }
+  .ButtonNext {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

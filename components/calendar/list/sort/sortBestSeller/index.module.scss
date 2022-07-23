@@ -1,0 +1,9 @@
+.bestSeller {
+  background: #fff;
+  padding: 8.5px 8.5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.bestSeller.active {
+  background-color: rgb(255, 92, 67);
+}

@@ -1,0 +1,53 @@
+.price {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  width: 200px;
+  border-radius: 2px;
+  .select {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .select.active {
+    color: rgb(255, 92, 67);
+  }
+  .item {
+    margin-top: 1px;
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    z-index: 9;
+    .noActive {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 15px;
+      p {
+        margin: 0;
+      }
+      .icons {
+        display: none;
+      }
+    }
+    .noActive.active {
+      .icons {
+        display: block;
+        color: rgb(255, 92, 67);
+      }
+    }
+  }
+}
+.price:hover {
+  .select {
+    position: relative;
+  }
+  .item {
+    display: block;
+    .noActive {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}

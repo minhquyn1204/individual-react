@@ -1,0 +1,42 @@
+.tab {
+  .moduleTab {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 8.5px 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    li {
+      .sortBestSeller,
+      .sortRelateTo {
+        padding: 5px 15px;
+        background: #fff;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .sortBestSeller.tabActive {
+        background: rgb(255, 92, 67);
+        color: #fff;
+      }
+      .sortRelateTo.tabActive {
+        background: rgb(255, 92, 67);
+      }
+      .sortPrice.tabActive {
+        background: rgb(255, 92, 67);
+      }
+    }
+  }
+  .body {
+    .startData,
+    .BestSeller {
+      display: none;
+    }
+    .startData.active {
+      display: block;
+    }
+    .BestSeller.active {
+      display: block;
+    }
+  }
+}

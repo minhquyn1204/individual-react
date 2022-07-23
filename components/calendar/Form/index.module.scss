@@ -1,0 +1,103 @@
+.Form {
+  position: relative;
+  .box {
+    .input {
+      display: none;
+    }
+    .input2 {
+      display: block;
+      height: auto;
+    }
+  }
+  .FormItem {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    height: auto;
+    li {
+      .inputForm {
+        width: 100%;
+        padding-bottom: 10px;
+      }
+      Button {
+        width: 100%;
+        color: aliceblue;
+        background-color: black;
+      }
+    }
+  }
+  .cart {
+    position: relative;
+    Button {
+      position: absolute;
+      top: 25%;
+      right: 0;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 960px) {
+  .Form {
+    transition: all 0.3s ease-in-out;
+    .box {
+      transition: all 0.3s ease-in-out;
+      margin: 10px 0;
+      height: auto;
+      border: 1px solid gray;
+      padding: 8.5px 14px;
+      border-radius: 5px;
+      .input {
+        display: block;
+      }
+      .rightIcon {
+        cursor: pointer;
+        svg {
+          transition: all 0.3s ease-in-out;
+          transform: rotate(-90deg);
+        }
+      }
+      .showDEG {
+        cursor: pointer;
+        svg {
+          transition: all 0.3s ease-in-out;
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .FormItem {
+      transition: all 0.3s ease-in-out;
+      position: initial;
+      top: initial;
+      left: initial;
+      transform: initial;
+      opacity: 1;
+      pointer-events: auto;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      .inputli {
+        padding-top: 10px;
+      }
+      li {
+        position: relative;
+        .inputForm {
+          width: 100%;
+          padding-bottom: 10px;
+        }
+        Button {
+          position: absolute;
+          right: 0;
+          top: 25%;
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

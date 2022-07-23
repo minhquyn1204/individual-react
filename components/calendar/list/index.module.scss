@@ -1,0 +1,20 @@
+.list {
+}
+.ListCard {
+  .CardMain {
+    padding: 5px;
+  }
+}
+.showlistCard {
+}
+@media screen and(max-width:960px) {
+  .list {
+  }
+  .ListCard {
+    .CardMain {
+      padding: 5px;
+    }
+  }
+  .showlistCard {
+  }
+}

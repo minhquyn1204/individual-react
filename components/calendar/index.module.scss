@@ -1,0 +1,10 @@
+.Calendar {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .Calendar {
+  }
+}

@@ -1,0 +1,6 @@
+dùng debounce khi người dùng nhập search sau 0.25s mới bắt đầu focus
+checkbox bị lỗi khi phân trang,
+lọc khi phân trang
+
+//
+high order function

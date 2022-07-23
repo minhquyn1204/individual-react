@@ -1,0 +1,60 @@
+.Cart {
+  padding: 0 13.25px;
+  .title_pgae {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .clearAll {
+      Button {
+        background-color: #cc0000;
+        color: #fff;
+      }
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 92, 67);
+    border-radius: 5px;
+  }
+  .listCart {
+    height: 350px;
+    overflow-y: scroll;
+    border-bottom: 1px solid rgb(255, 92, 67);
+    padding: 0px 10px;
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      .infor {
+        margin: 10px;
+        h5 {
+          font-size: 16px;
+          margin: 0;
+        }
+      }
+      .delete {
+        svg {
+          color: #cc0000;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  .total {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h5 {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
