@@ -1,0 +1,274 @@
+.NavMain {
+  z-index: 999;
+  top: 0px;
+  max-width: 1190px;
+  width: 100%;
+  .NavUl {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .NavLi {
+      position: relative;
+      list-style: none;
+      .NavName {
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+        padding: 12px 0;
+        font-weight: 400;
+        list-style: none;
+        position: relative;
+        margin-right: 0px;
+        .items::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #fff;
+          transform: scale(0, 1);
+          transition: transform 0.3s ease;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+        }
+        .items:hover::after {
+          transform: scale(1, 1);
+        }
+        .items.active {
+          &::after {
+            transform: none;
+            background-color: #fff;
+          }
+        }
+        .rightIcon {
+          display: none;
+        }
+      }
+      .navsItem {
+        position: absolute;
+        list-style: none;
+        background-color: rgb(255 255 255 / 80%);
+        left: -30px;
+        margin-top: 14px;
+        transform: scale(0);
+        transform-origin: top left;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+
+        .navsItemLi {
+          padding: 3px 20px 3px 10px;
+          border-bottom: 1px solid #000;
+          transition: all 0.3s ease-in-out;
+          background-color: rgb(255 255 255 / 80%);
+          h5 {
+            margin: 4px;
+            white-space: nowrap;
+            font-family: Open Sans;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            color: var(--hover-color-);
+            border-color: var(--hover-color-);
+            h5 {
+              color: var(--hover-color-);
+            }
+          }
+        }
+      }
+      &:hover .navsItem {
+        cursor: pointer;
+        transform: scale(1);
+      }
+    }
+    .toggleTheme {
+      cursor: pointer;
+    }
+    .modal {
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      .Tutorialmobie {
+        height: 200px;
+        z-index: 99999;
+        max-width: 500px;
+        border-radius: 5px;
+        padding: 20px 30px;
+        background-color: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate3d(-50%, -50%, 9999990px);
+        width: 95%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        .color_selection {
+          margin-bottom: 10px;
+          .color_version {
+            background-color: red;
+          }
+          .color_title {
+            cursor: pointer;
+            text-align: center;
+          }
+        }
+        Button {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+  .close {
+    display: none;
+  }
+}
+.btnWrapper {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .NavMain {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    transform: translateX(120%);
+    transition: all 0.4s ease-in-out;
+    background: rgba(0, 104, 56);
+    .NavUl {
+      display: initial;
+      .NavLi {
+        .toggleTheme {
+          cursor: pointer;
+        }
+        padding: 10px 20px;
+        .NavName {
+          display: flex;
+          .rightIcon {
+            transform: translateX(10px);
+            display: block;
+          }
+        }
+        .navsItem {
+          position: initial;
+          top: initial;
+          left: initial;
+          transform: initial;
+          opacity: 1;
+          pointer-events: auto;
+          width: 100%;
+          padding: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          margin: 0;
+          .navsItemLi {
+            padding: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            h5 {
+              padding: 0px 20px;
+            }
+          }
+        }
+        .navsItem.active {
+          height: 100%;
+          transform: initial;
+        }
+      }
+    }
+    .close {
+      position: absolute;
+      background-color: #fff;
+      top: 0;
+      display: flex;
+      height: 30px;
+      width: 45px;
+      svg {
+        margin: auto;
+        font-size: 30px;
+        color: rgba(0, 104, 56);
+      }
+    }
+  }
+  .NavMain.show {
+    transform: translateX(0);
+    .ModuleContent {
+      li.active {
+        background-color: var(--primary-color-);
+        color: #fff;
+      }
+    }
+  }
+  .btnWrapper {
+    z-index: 99;
+    display: block;
+    position: fixed;
+    color: #fff;
+    border: none;
+    top: 0px;
+    right: 10px;
+    .btnNav {
+      display: flex;
+      cursor: pointer;
+      color: #fff;
+      height: 60px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      svg {
+        margin-left: 10px;
+        font-size: 1.4em;
+        color: #fff;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .NavMain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    transform: translateX(120%);
+    transition: all 0.4s ease-in-out;
+    background: rgba(0, 104, 56);
+    .NavUl {
+      display: initial;
+      .NavLi {
+        .NavName {
+          padding: 10px 20px;
+          display: flex;
+          .rightIcon {
+            transform: translateX(10px);
+            display: block;
+          }
+        }
+        .navsItem {
+          position: initial;
+          top: initial;
+          left: initial;
+          transform: initial;
+          opacity: 1;
+          pointer-events: auto;
+          width: 100%;
+          padding: 0;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

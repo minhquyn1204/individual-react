@@ -1,0 +1,18 @@
+.Bill {
+  .cart {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    h5 {
+      text-align: center;
+      font-size: 30px;
+      margin: 5px;
+    }
+  }
+
+  .Grid1 {
+  }
+  .Grid2 {
+    border-top: 1px solid #333;
+  }
+}

@@ -1,0 +1,23 @@
+.Cart {
+  height: 330px;
+  h5 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+  }
+  .item {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+  }
+  .Grid2 {
+    border-top: 1px solid #333;
+  }
+}
